@@ -67,7 +67,23 @@
             </Tab>
             <Tab text="月工资详情">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="U_m_table" layoutX="306.0" layoutY="86.0" prefHeight="700.0" prefWidth="1012.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="U_m_name" prefWidth="142.0" text="姓名" />
+                            <TableColumn fx:id="U_m_dept" prefWidth="163.0" text="所属部门" />
+                              <TableColumn fx:id="U_m_salary" prefWidth="141.0" text="底薪" />
+                              <TableColumn fx:id="U_m_dept_allowance" prefWidth="129.0" text="部门津贴" />
+                              <TableColumn fx:id="U_m_ew_allowance" prefWidth="138.0" text="加班津贴" />
+                              <TableColumn fx:id="U_m_deduction" minWidth="0.0" prefWidth="145.0" text="缺勤扣除" />
+                              <TableColumn fx:id="U_m_sum" prefWidth="153.0" text="当月总计" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="476.0" layoutY="721.0" mnemonicParsing="false" onAction="#Search_m_info" text="查询" />
+                        <Label layoutX="33.0" layoutY="729.0" text="月份：" />
+                        <ChoiceBox fx:id="U_m_choice_box" layoutX="96.0" layoutY="727.0" onMouseEntered="#Month_setItems" prefWidth="150.0" />
+                     </children></AnchorPane>
               </content>
             </Tab>
             <Tab text="工资汇总">

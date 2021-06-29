@@ -22,6 +22,16 @@ public class month_salary {
         this.sum = sum;
     }
 
+    public month_salary(String name, String dept, int salary, int dept_allowance, int ew_allowance, int deduction, int sum) {
+        this.name = name;
+        this.dept = dept;
+        this.salary = salary;
+        this.dept_allowance = dept_allowance;
+        this.ew_allowance = ew_allowance;
+        this.deduction = deduction;
+        this.sum = sum;
+    }
+
     public int getId() {
         return id;
     }

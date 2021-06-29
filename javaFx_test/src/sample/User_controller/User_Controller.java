@@ -4,13 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Item.Attend;
 import sample.Item.Employee;
 import sample.Item.Ex_work;
+import sample.Item.month_salary;
 import sample.sql_operation.Dbutil;
 
 import java.sql.Connection;
@@ -191,9 +190,125 @@ public class User_Controller {
 
     //-------------------------------------以上为员工界面加班信息查询部分----------------------------------------------//
 
+    @FXML
+    TableView<month_salary> U_m_table;
+    @FXML
+    TableColumn U_m_name;
+    @FXML
+    TableColumn U_m_dept;
+    @FXML
+    TableColumn U_m_salary;
+    @FXML
+    TableColumn U_m_dept_allowance;
+    @FXML
+    TableColumn U_m_ew_allowance;
+    @FXML
+    TableColumn U_m_deduction;
+    @FXML
+    TableColumn U_m_sum;
+    @FXML
+    ChoiceBox U_m_choice_box;
 
+    @FXML
+    void Month_setItems() {
+        U_m_choice_box.setItems(FXCollections.observableArrayList("一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""));
+        U_m_choice_box.setTooltip(new Tooltip("选择月份"));
+    }
 
+    @FXML
+    void Search_m_info() {
+        String month=(String)U_m_choice_box.getValue();
+        int month_select=0;
+        if(month==null) month_select=1;
+        if(month!=null)
+        {
+            switch (month){
+                case "一月":
+                    month_select=1;
+                    break;
+                case "二月":
+                    month_select=2;
+                    break;
+                case "三月":
+                    month_select=3;
+                    break;
+                case "四月":
+                    month_select=4;
+                    break;
+                case "五月":
+                    month_select=5;
+                    break;
+                case "六月":
+                    month_select=6;
+                    break;
+                case "七月":
+                    month_select=7;
+                    break;
+                case "八月":
+                    month_select=8;
+                    break;
+                case "九月":
+                    month_select=9;
+                    break;
+                case "十月":
+                    month_select=10;
+                    break;
+                case "十一月":
+                    month_select=11;
+                    break;
+                case "十二月":
+                    month_select=12;
+                    break;
+            }
 
-    
+        }
+        String sql_search="select Employee_Basic_Information.ID,Employee_Basic_Information.NAME,Department.NAME,SALARY,ALLOWANCE,ewSALARY,sum(Deduction)" +
+                "from Employee_Basic_Information left outer join Department on Employee_Basic_Information.deptID = Department.deptID left outer join Employee_Attend EA on Employee_Basic_Information.ID = EA.ID and month(notAttenddate)="+month_select+"  left outer join Extra_work_allowance Ewa on Employee_Basic_Information.ID = Ewa.ID and month(ewdate)="+month_select+"  left outer join Employee_Type on Employee_Basic_Information.typeID = Employee_Type.typeID" +
+                " where Employee_Basic_Information.ID="+User_Login_Controller.p_id+
+                " group by Employee_Basic_Information.ID,Employee_Basic_Information.NAME,SALARY,ALLOWANCE,ewSALARY";;
+        int temp;
+        ObservableList<month_salary> Info_list= FXCollections.observableArrayList();
+        U_m_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        U_m_dept.setCellValueFactory(new PropertyValueFactory<>("dept"));
+        U_m_salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        U_m_dept_allowance.setCellValueFactory(new PropertyValueFactory<>("dept_allowance"));
+        U_m_ew_allowance.setCellValueFactory(new PropertyValueFactory<>("ew_allowance"));
+        U_m_deduction.setCellValueFactory(new PropertyValueFactory<>("deduction"));
+        U_m_sum.setCellValueFactory(new PropertyValueFactory<>("sum"));
+        U_m_table.getItems().clear();
+        try {
+            ptmt=conn.prepareStatement(sql_search);
+//            ptmt.setString(1,select_name);
+            rs=ptmt.executeQuery();
+            while(rs.next())
+            {
+                temp=0;
+                temp=rs.getInt(4)+rs.getInt(5)+rs.getInt(6)-rs.getInt(7);
+                Info_list.add(new month_salary(rs.getString(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getInt(6),rs.getInt(7),temp));
+                U_m_table.setItems(Info_list);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("操作失败");
+            alert.showAndWait();
+            return ;
+        }finally {
+            if(ptmt!=null&&stmt!=null&&rs!=null)
+            {
+                try {
+                    ptmt=null;
+                    stmt=null;
+                    rs=null;
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    //-------------------------------------以上为员工界面每月工资信息查询部分----------------------------------------------//
 
 }
