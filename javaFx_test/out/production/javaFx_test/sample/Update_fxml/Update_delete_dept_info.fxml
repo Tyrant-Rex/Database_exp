@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="100.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Update_controller.Update_delete_dept_controller">
+   <children>
+      <Label layoutX="14.0" layoutY="37.0" text="部门名称：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_name" layoutX="114.0" layoutY="34.0" prefHeight="36.0" prefWidth="107.0" />
+      <Label layoutX="244.0" layoutY="37.0" text="部门津贴：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_allowance" layoutX="344.0" layoutY="32.0" prefHeight="36.0" prefWidth="107.0" />
+      <Label layoutX="456.0" layoutY="37.0" text="部门经理：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_manager" layoutX="554.0" layoutY="32.0" prefHeight="36.0" prefWidth="107.0" />
+      <Label layoutX="675.0" layoutY="37.0" text="联系电话：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_tel" layoutX="767.0" layoutY="33.0" prefHeight="36.0" prefWidth="107.0" />
+      <Button layoutX="891.0" layoutY="38.0" mnemonicParsing="false" onAction="#Click_update_dept_info" text="修改" />
+      <Button layoutX="976.0" layoutY="38.0" mnemonicParsing="false" onAction="#Click_delete_dept_info" text="删除" />
+   </children>
+</AnchorPane>

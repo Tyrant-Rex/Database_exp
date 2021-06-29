@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="100.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Update_controller.Update_delete_type_controller">
+   <children>
+      <Label layoutX="14.0" layoutY="37.0" text="职位名称：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_type_name" layoutX="106.0" layoutY="34.0" prefHeight="36.0" prefWidth="100.0" />
+      <Label layoutX="217.0" layoutY="37.0" text="所属部门：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="type_info_choice_box" layoutX="309.0" layoutY="38.0" onMouseEntered="#type_info_setItems" prefWidth="150.0" />
+      <Label layoutX="472.0" layoutY="39.0" text="基本薪资：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_type_salary" layoutX="572.0" layoutY="34.0" prefHeight="36.0" prefWidth="100.0" />
+      <Label layoutX="686.0" layoutY="37.0" text="职位等级：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="U_D_type_level" layoutX="778.0" layoutY="34.0" prefHeight="36.0" prefWidth="100.0" />
+      <Button layoutX="894.0" layoutY="38.0" mnemonicParsing="false" onAction="#Click_Update_type_info" text="修改" />
+      <Button layoutX="981.0" layoutY="38.0" mnemonicParsing="false" onAction="#Click_delete_type_info" text="删除" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.User_controller.User_Login_Controller">
+   <children>
+      <Label layoutX="210.0" layoutY="69.0" text="工资管理系统">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="User_name" layoutX="179.0" layoutY="146.0" prefHeight="36.0" prefWidth="280.0" />
+      <PasswordField fx:id="User_password" layoutX="179.0" layoutY="221.0" prefHeight="36.0" prefWidth="280.0" />
+      <Label layoutX="55.0" layoutY="150.0" text="用户账号：" textFill="#1a00ff">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="225.0" text="密码：" textFill="#1a00ff">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="User_login_button" layoutX="229.0" layoutY="292.0" mnemonicParsing="false" onAction="#Click_User_login" prefHeight="55.0" prefWidth="143.0" text="用户登录">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

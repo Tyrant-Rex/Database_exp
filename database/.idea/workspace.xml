@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57921caf-3e2f-43ac-90ef-0b3bdbe4af8c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="User_login_info_table: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ProjectId" id="1sNhNvuHEEA0qRcM5S03ELzcYSv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Salary_management" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.114443086" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4e702743" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@79538d46" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@99261e" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2e229fd5" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@717e0275" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57921caf-3e2f-43ac-90ef-0b3bdbe4af8c" name="Default Changelist" comment="" />
+      <created>1620718917197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620718917197</updated>
+      <workItem from="1620718920101" duration="8285000" />
+      <workItem from="1621133673179" duration="636000" />
+      <workItem from="1621319578306" duration="11861000" />
+      <workItem from="1621582280215" duration="7750000" />
+      <workItem from="1621651833037" duration="13528000" />
+      <workItem from="1621733236805" duration="14880000" />
+      <workItem from="1621924633355" duration="2270000" />
+      <workItem from="1622428411188" duration="5817000" />
+      <workItem from="1622464104223" duration="1216000" />
+      <workItem from="1622529669748" duration="4701000" />
+      <workItem from="1622817882762" duration="219000" />
+      <workItem from="1622861305684" duration="11196000" />
+      <workItem from="1622980073980" duration="9493000" />
+      <workItem from="1623032906663" duration="4157000" />
+      <workItem from="1623050306321" duration="2689000" />
+      <workItem from="1623133583170" duration="747000" />
+      <workItem from="1623134744919" duration="277000" />
+      <workItem from="1623135075361" duration="10804000" />
+      <workItem from="1623308781224" duration="674000" />
+      <workItem from="1623549930748" duration="3886000" />
+      <workItem from="1623578627609" duration="2902000" />
+      <workItem from="1623677626206" duration="389000" />
+      <workItem from="1623678038587" duration="3540000" />
+      <workItem from="1623738595435" duration="166000" />
+      <workItem from="1623738771699" duration="47000" />
+      <workItem from="1623738837036" duration="7000" />
+      <workItem from="1623738858636" duration="5399000" />
+      <workItem from="1623807913456" duration="1521000" />
+      <workItem from="1623825084433" duration="28000" />
+      <workItem from="1623825212832" duration="162000" />
+      <workItem from="1623825610842" duration="308000" />
+      <workItem from="1623826101302" duration="1010000" />
+      <workItem from="1623827610486" duration="9110000" />
+      <workItem from="1623914791924" duration="773000" />
+      <workItem from="1623915570513" duration="2512000" />
+      <workItem from="1624084338115" duration="2255000" />
+      <workItem from="1624153738006" duration="13935000" />
+      <workItem from="1624240630385" duration="2604000" />
+      <workItem from="1624257306128" duration="1923000" />
+      <workItem from="1624264924320" duration="992000" />
+      <workItem from="1624278927087" duration="32000" />
+      <workItem from="1624279059261" duration="6334000" />
+      <workItem from="1624326929313" duration="1088000" />
+      <workItem from="1624331124919" duration="16918000" />
+      <workItem from="1624942901440" duration="3340000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="119" key="#Tomcat_Server" timestamp="1622898428057">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="119" key="#Tomcat_Server/0.0.1707.920@0.0.1707.920" timestamp="1622898428057" />
+    <state x="446" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623832167962">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1623832167962" />
+    <state x="634" y="216" key="FileChooserDialogImpl" timestamp="1623308851369">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="634" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1623308851369" />
+    <state width="1446" height="214" key="GridCell.Tab.0.bottom" timestamp="1624946190599">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1446" height="214" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1624946190599" />
+    <state width="1446" height="214" key="GridCell.Tab.0.center" timestamp="1624946190599">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1446" height="214" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1624946190599" />
+    <state width="1446" height="214" key="GridCell.Tab.0.left" timestamp="1624946190599">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1446" height="214" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1624946190599" />
+    <state width="1446" height="214" key="GridCell.Tab.0.right" timestamp="1624946190599">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1446" height="214" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1624946190599" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.bottom" timestamp="1621670619470">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1621670619470" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.center" timestamp="1621670619470">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1621670619470" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.left" timestamp="1621670619470">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1621670619470" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.right" timestamp="1621670619470">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1621670619470" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.bottom" timestamp="1621670619465">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1621670619465" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.center" timestamp="1621670619465">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1621670619465" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.left" timestamp="1621670619465">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1621670619465" />
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.right" timestamp="1621670619465">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1621670619465" />
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.bottom" timestamp="1621670391655">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.bottom/0.0.1707.920@0.0.1707.920" timestamp="1621670391655" />
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.center" timestamp="1621670391655">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.center/0.0.1707.920@0.0.1707.920" timestamp="1621670391655" />
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.left" timestamp="1621670391655">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.left/0.0.1707.920@0.0.1707.920" timestamp="1621670391655" />
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.right" timestamp="1621670391655">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="464" y="17" width="1143" height="271" key="GridCell.Tab.3.right/0.0.1707.920@0.0.1707.920" timestamp="1621670391655" />
+    <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1622530756743">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="218" height="477" key="HiddenNamespacesPopup/0.0.1707.920@0.0.1707.920" timestamp="1622530756743" />
+    <state x="429" y="70" key="SettingsEditor" timestamp="1622867368638">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="429" y="70" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1622867368638" />
+    <state x="679" y="333" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1624336607119">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="679" y="333" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1707.920@0.0.1707.920" timestamp="1624336607119" />
+    <state x="434" y="116" key="com.intellij.database.dbimport.ImportDialog" timestamp="1621582661717">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="434" y="116" key="com.intellij.database.dbimport.ImportDialog/0.0.1707.920@0.0.1707.920" timestamp="1621582661717" />
+    <state x="584" y="266" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1623550622768">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="584" y="266" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1707.920@0.0.1707.920" timestamp="1623550622768" />
+    <state x="1035" y="215" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1623551948195">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="1035" y="215" key="com.intellij.database.run.ParametersPanel.Standalone/0.0.1707.920@0.0.1707.920" timestamp="1623551948195" />
+    <state x="234" y="166" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1623551953380">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="234" y="166" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1707.920@0.0.1707.920" timestamp="1623551953380" />
+    <state x="538" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1624942901137">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="538" y="285" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1624942901137" />
+    <state x="646" y="144" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1620718948383">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="646" y="144" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1707.920@0.0.1707.920" timestamp="1620718948383" />
+    <state x="464" y="17" width="1157" height="336" key="dock-window-1" timestamp="1621670573703">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="464" y="17" width="1157" height="336" key="dock-window-1/0.0.1707.920@0.0.1707.920" timestamp="1621670573703" />
+    <state x="407" y="393" width="1157" height="308" key="dock-window-2" timestamp="1621671121616">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="407" y="393" width="1157" height="308" key="dock-window-2/0.0.1707.920@0.0.1707.920" timestamp="1621671121616" />
+    <state x="241" y="65" key="new project wizard" timestamp="1623308852531">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="241" y="65" key="new project wizard/0.0.1707.920@0.0.1707.920" timestamp="1623308852531" />
+    <state x="943" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1624283143422">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="943" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1624283143422" />
+  </component>
+</project>

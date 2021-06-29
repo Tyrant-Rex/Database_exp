@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.User_controller.User_Controller">
+   <children>
+      <TabPane layoutX="106.0" layoutY="93.0" prefHeight="800.0" prefWidth="1012.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="员工信息">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="U_e_table" layoutX="188.0" layoutY="90.0" prefHeight="700.0" prefWidth="1012.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="U_e_name" prefWidth="115.0" text="员工姓名" />
+                              <TableColumn fx:id="U_e_sex" prefWidth="60.0" text="性别" />
+                              <TableColumn fx:id="U_e_age" prefWidth="67.0" text="年龄" />
+                              <TableColumn fx:id="U_e_addr" prefWidth="247.0" text="住址" />
+                              <TableColumn fx:id="U_e_tel" prefWidth="204.0" text="联系方式" />
+                              <TableColumn fx:id="U_e_dept" prefWidth="161.0" text="所属部门" />
+                              <TableColumn fx:id="U_e_type" minWidth="0.0" prefWidth="157.0" text="职位" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="476.0" layoutY="721.0" mnemonicParsing="false" onAction="#Search_e_info" text="查询" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="考勤信息">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="U_a_table" layoutX="199.0" layoutY="64.0" prefHeight="700.0" prefWidth="1012.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="U_a_name" prefWidth="296.0" text="缺勤人员" />
+                            <TableColumn fx:id="U_a_date" prefWidth="373.0" text="缺勤日期" />
+                              <TableColumn fx:id="U_a_deduction" prefWidth="342.0" text="本次缺勤所扣工资" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="476.0" layoutY="721.0" mnemonicParsing="false" onAction="#Search_a_info" text="查询" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="加班信息">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="月工资详情">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="工资汇总">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

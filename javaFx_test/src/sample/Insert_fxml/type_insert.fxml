@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="140.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Insert_controller.Insert_in_type">
+   <children>
+      <Label layoutX="14.0" layoutY="25.0" text="职位名称：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="242.0" layoutY="25.0" text="职位所属部门：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="87.0" text="职位基本薪资：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="87.0" text="职位等级：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="I_t_name" layoutX="114.0" layoutY="23.0" prefHeight="36.0" prefWidth="100.0" />
+      <ChoiceBox fx:id="Insert_type_box" layoutX="396.0" layoutY="25.0" onMouseEntered="#Insert_type_box_setItems" prefWidth="150.0" />
+      <TextField fx:id="I_t_salary" layoutX="154.0" layoutY="85.0" prefHeight="36.0" prefWidth="100.0" />
+      <TextField fx:id="I_t_level" layoutX="382.0" layoutY="85.0" prefHeight="36.0" prefWidth="100.0" />
+      <Button layoutX="617.0" layoutY="59.0" mnemonicParsing="false" onAction="#Click_insert_type_info" text="添加" />
+   </children>
+</AnchorPane>

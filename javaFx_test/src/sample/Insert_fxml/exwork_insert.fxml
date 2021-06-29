@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="100.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Insert_controller.Insert_in_exwork">
+   <children>
+      <Label layoutX="14.0" layoutY="38.0" text="加班人员id：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="38.0" text="加班人员姓名：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="38.0" text="加班日期：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="668.0" layoutY="38.0" text="加班类型：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="890.0" layoutY="38.0" text="加班时间:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="I_ex_id_box" layoutX="125.0" layoutY="34.0" onMouseEntered="#Insert_ex_id_box_setItems" prefHeight="36.0" prefWidth="90.0" />
+      <Label fx:id="I_ex_name" layoutX="377.0" layoutY="38.0" text="Label">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="I_ex_date" layoutX="536.0" layoutY="34.0" prefHeight="36.0" prefWidth="119.0" />
+      <ChoiceBox fx:id="I_ex_ewtype_box" layoutX="766.0" layoutY="34.0" onMouseEntered="#Insert_ewtype_box_setItems" prefHeight="36.0" prefWidth="119.0" />
+      <TextField fx:id="I_ex_time" layoutX="985.0" layoutY="34.0" prefHeight="36.0" prefWidth="119.0" />
+      <Button layoutX="1165.0" layoutY="34.0" mnemonicParsing="false" onAction="#Click_insert_exwork_info" text="添加" />
+   </children>
+</AnchorPane>

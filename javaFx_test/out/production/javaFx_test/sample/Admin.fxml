@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane cacheShape="false" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Admin_controller.Admin_Controller">
+   <children>
+      <TabPane layoutX="62.0" layoutY="85.0" prefHeight="800.0" prefWidth="1012.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="员工信息">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Pane layoutY="17.0" prefHeight="62.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="43.0" layoutY="22.0" text="请输入员工姓名 ：">
+                                             <font>
+                                                <Font size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="input_e_name" layoutX="223.0" layoutY="25.0" />
+                                          <Button fx:id="e_search_one" layoutX="472.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_e_one" text="查询" />
+                                          <Button fx:id="e_search_all" layoutX="542.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_e_all" text="查询全部" />
+                                          <Button layoutX="715.0" layoutY="25.0" mnemonicParsing="false" onAction="#Insert_e_basic" text="添加员工" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="Basic_information_table" layoutX="305.0" layoutY="175.0" onMouseClicked="#Update_delete_e_basic_info" prefHeight="681.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="B_c_id" prefWidth="104.0" text="员工id" />
+                                        <TableColumn fx:id="B_c_name" prefWidth="98.0" text="姓名" />
+                                          <TableColumn fx:id="B_c_sex" prefWidth="44.0" text="性别" />
+                                          <TableColumn fx:id="B_c_age" prefWidth="46.0" text="年龄" />
+                                          <TableColumn fx:id="B_c_addr" prefWidth="228.0" text="住址" />
+                                          <TableColumn fx:id="B_c_tel" prefWidth="195.0" text="联系方式" />
+                                          <TableColumn fx:id="B_c_dept" prefWidth="123.0" text="所属部门" />
+                                          <TableColumn fx:id="B_c_type" prefWidth="169.0" text="职位" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="部门信息">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" layoutX="166.0" layoutY="102.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="22.0" text="请输入部门名称：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="input_d_name" layoutX="223.0" layoutY="25.0" />
+                                    <Button fx:id="d_search_one" layoutX="481.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_d_one" text="查询" />
+                                    <Button fx:id="d_search_all" layoutX="561.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_d_all" text="查询全部" />
+                                    <Button layoutX="689.0" layoutY="25.0" mnemonicParsing="false" onAction="#Insert_dept" text="添加部门" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="Dept_info_table" layoutX="90.0" layoutY="34.0" onMouseClicked="#Update_delete_dept_info" prefHeight="672.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="D_c_id" prefWidth="133.0" text="部门id" />
+                                        <TableColumn fx:id="D_c_name" prefWidth="213.0" text="部门名称" />
+                                          <TableColumn fx:id="D_c_allowance" prefWidth="211.0" text="部门员工津贴" />
+                                          <TableColumn fx:id="D_c_manager" prefWidth="181.0" text="部门经理" />
+                                          <TableColumn fx:id="D_c_tel" prefWidth="271.0" text="部门联系电话" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="职位信息">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" layoutX="310.0" layoutY="87.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="22.0" text="请输入职位名称：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="input_t_name" layoutX="223.0" layoutY="25.0" />
+                                    <Button fx:id="t_search_one" layoutX="481.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_t_one" text="查询" />
+                                    <Button fx:id="t_search_all" layoutX="561.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_t_all" text="查询全部" />
+                                    <Button layoutX="714.0" layoutY="25.0" mnemonicParsing="false" onAction="#Insert_type" text="添加职位" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="Type_info_table" layoutX="68.0" layoutY="49.0" onMouseClicked="#Update_delete_type_info" prefHeight="672.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="T_c_id" prefWidth="157.0" text="职位id" />
+                                        <TableColumn fx:id="T_c_name" prefWidth="202.0" text="职位名称" />
+                                          <TableColumn fx:id="T_c_dept" prefWidth="266.0" text="职位所属部门" />
+                                          <TableColumn fx:id="T_c_salary" prefWidth="211.0" text="职位基本薪资" />
+                                          <TableColumn fx:id="T_c_level" prefWidth="173.0" text="职位等级" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="考勤情况">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" layoutX="283.0" layoutY="121.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ChoiceBox fx:id="a_choice_box" layoutX="114.0" layoutY="21.0" onMouseEntered="#Choice_box_a_setItems" prefHeight="36.0" prefWidth="73.0" />
+                                    <Label layoutX="36.0" layoutY="22.0" text="月份：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="314.0" layoutY="22.0" text="请输入姓名：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="input_a_name" layoutX="440.0" layoutY="25.0" />
+                                    <Button fx:id="a_search_one" layoutX="718.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_a_one" text="查询" />
+                                    <Button layoutX="804.0" layoutY="25.0" mnemonicParsing="false" onAction="#Insert_attend" text="添加考勤记录" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="Attend_info_table" layoutX="124.0" layoutY="100.0" onMouseClicked="#Update_delete_attend_info" prefHeight="672.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                          <TableColumn fx:id="A_c_id" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="A_c_name" prefWidth="267.0" text="考勤人员" />
+                                        <TableColumn fx:id="A_c_date" prefWidth="377.0" text="缺勤日期" />
+                                          <TableColumn fx:id="A_c_Duc" prefWidth="364.0" text="本次缺勤所扣工资" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="加班信息">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" layoutX="283.0" layoutY="57.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="22.0" text="月份：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="ex_choice_box" layoutX="114.0" layoutY="21.0" onMouseEntered="#Choice_box_ex_setItems" prefHeight="36.0" prefWidth="73.0" />
+                                    <Label layoutX="314.0" layoutY="22.0" text="请输入姓名：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="input_ex_name" layoutX="440.0" layoutY="25.0" />
+                                    <Button fx:id="ex_search_one" layoutX="718.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_ex_one" text="查询" />
+                                    <Button layoutX="811.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_insert_exwork_info" text="添加加班记录" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="exwork_info_table" layoutX="239.0" layoutY="116.0" onMouseClicked="#Update_delete_exwork_info" prefHeight="672.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                          <TableColumn fx:id="Ex_c_id" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="EX_c_name" prefWidth="205.0" text="加班人员" />
+                                        <TableColumn fx:id="EX_c_date" prefWidth="186.0" text="加班日期" />
+                                          <TableColumn fx:id="EX_c_type" prefWidth="207.0" text="加班类型" />
+                                          <TableColumn fx:id="EX_c_time" prefWidth="128.0" text="加班时间" />
+                                          <TableColumn fx:id="EX_c_allowance" prefWidth="208.0" text="加班所得薪酬" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="员工月工资详情">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" layoutX="230.0" layoutY="81.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="22.0" text="月份：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="s_month_choice_box" layoutX="114.0" layoutY="21.0" onMouseEntered="#Choice_box_s_month_setItems" prefHeight="36.0" prefWidth="73.0" />
+                                    <Label layoutX="478.0" layoutY="22.0" text="请输入姓名：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="input_s_month_name" layoutX="622.0" layoutY="25.0" />
+                                    <Button fx:id="s_month_search_one" layoutX="894.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_s_month_one" text="查询" />
+                                    <Label layoutX="215.0" layoutY="21.0" text="部门：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="s_month_dept_choice_box" layoutX="290.0" layoutY="21.0" onMouseEntered="#Choice_box_s_month_dept_setItems" prefHeight="36.0" prefWidth="73.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="s_month_info_table" layoutX="136.0" layoutY="63.0" prefHeight="672.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                          <TableColumn fx:id="M_c_id" prefWidth="84.0" text="员工id" />
+                                        <TableColumn fx:id="M_c_name" prefWidth="76.0" text="姓名" />
+                                          <TableColumn fx:id="M_c_dept" prefWidth="111.0" text="所属部门" />
+                                        <TableColumn fx:id="M_c_salary" prefWidth="114.0" text="底薪" />
+                                          <TableColumn fx:id="M_c_dept_allowance" prefWidth="123.0" text="部门津贴" />
+                                          <TableColumn fx:id="M_c_ew_allowance" prefWidth="148.0" text="加班津贴" />
+                                          <TableColumn fx:id="M_c_deduction" minWidth="0.0" prefWidth="156.0" text="缺勤扣除" />
+                                          <TableColumn fx:id="M_c_sum" prefWidth="197.0" text="当月总计" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="员工工资汇总">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10092961487383798" layoutX="260.0" layoutY="34.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="22.0" text="请输入员工姓名：">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="input_y_name" layoutX="223.0" layoutY="25.0" />
+                                    <Button fx:id="y_search" layoutX="472.0" layoutY="25.0" mnemonicParsing="false" onAction="#Click_search_y" text="查询" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="y_info_table" layoutX="198.0" layoutY="91.0" prefHeight="672.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="Y_c_id" prefWidth="195.0" text="员工id" />
+                                        <TableColumn fx:id="Y_c_name" prefWidth="242.0" text="员工姓名" />
+                                          <TableColumn fx:id="Y_c_salary" prefWidth="312.0" text="本年度总工资" />
+                                          <TableColumn fx:id="Y_c_bonus" prefWidth="260.0" text="年终奖" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

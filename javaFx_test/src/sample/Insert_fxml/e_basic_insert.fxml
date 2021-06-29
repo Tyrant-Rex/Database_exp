@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Insert_controller.Insert_in_e_basic">
+   <children>
+      <Label layoutX="14.0" layoutY="38.0" text="员工姓名：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="I_e_name" layoutX="108.0" layoutY="34.0" prefHeight="36.0" prefWidth="90.0" />
+      <Label layoutX="216.0" layoutY="38.0" text="员工性别：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="I_e_sex" layoutX="305.0" layoutY="34.0" prefHeight="36.0" prefWidth="90.0" />
+      <Label layoutX="415.0" layoutY="38.0" text="员工年龄：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="I_e_age" layoutX="515.0" layoutY="34.0" prefHeight="36.0" prefWidth="90.0" />
+      <Label layoutX="620.0" layoutY="39.0" text="住址：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="I_e_addr" layoutX="680.0" layoutY="34.0" prefHeight="36.0" prefWidth="90.0" />
+      <Label layoutX="14.0" layoutY="120.0" text="联系方式：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="I_e_tel" layoutX="108.0" layoutY="116.0" prefHeight="36.0" prefWidth="90.0" />
+      <Label layoutX="216.0" layoutY="119.0" text="所属部门：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="I_e_dept_box" layoutX="320.0" layoutY="125.0" onMouseEntered="#Insert_e_dept_box_setItems" prefWidth="150.0" />
+      <Label layoutX="530.0" layoutY="121.0" text="职位：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="I_e_type_box" layoutX="605.0" layoutY="125.0" onMouseEntered="#Insert_e_type_box_setItems" prefWidth="150.0" />
+      <Button layoutX="365.0" layoutY="217.0" mnemonicParsing="false" onAction="#Click_insert_e_info" text="添加" />
+   </children>
+</AnchorPane>
