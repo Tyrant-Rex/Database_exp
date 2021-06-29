@@ -19,6 +19,14 @@ public class Ex_work {
         this.allowance = allowance;
     }
 
+    public Ex_work(String name, Date date, String type, int time, int allowance) {
+        this.name = name;
+        this.date = date;
+        this.type = type;
+        this.time = time;
+        this.allowance = allowance;
+    }
+
     public int getId() {
         return id;
     }

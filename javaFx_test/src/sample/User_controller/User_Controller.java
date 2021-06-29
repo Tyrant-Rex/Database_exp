@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Item.Attend;
 import sample.Item.Employee;
+import sample.Item.Ex_work;
 import sample.sql_operation.Dbutil;
 
 import java.sql.Connection;
@@ -70,11 +71,12 @@ public class User_Controller {
             alert.showAndWait();
             return ;
         }finally {
-            if(ptmt!=null&&stmt!=null)
+            if(ptmt!=null&&stmt!=null&&rs!=null)
             {
                 try {
                     ptmt=null;
                     stmt=null;
+                    rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();
@@ -120,11 +122,12 @@ public class User_Controller {
             alert.showAndWait();
             return ;
         }finally {
-            if(ptmt!=null&&stmt!=null)
+            if(ptmt!=null&&stmt!=null&&rs!=null)
             {
                 try {
                     ptmt=null;
                     stmt=null;
+                    rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();
@@ -133,10 +136,64 @@ public class User_Controller {
         }
     }
     //-------------------------------------以上为员工界面考勤信息查询部分----------------------------------------------//
-
-
-
+    @FXML
+    TableView<Ex_work> U_ex_table;
+    @FXML
+    TableColumn U_ex_name;
+    @FXML
+    TableColumn U_ex_date;
+    @FXML
+    TableColumn U_ex_type;
+    @FXML
+    TableColumn U_ex_time;
+    @FXML
+    TableColumn U_ex_allowance;
+    @FXML
+    void Search_ex_info() {
+        String sql_search="select NAME,ewdate,ewtypeNAME,ewtime,ewSALARY from Employee_Basic_Information,Extra_work_allowance,Extra_work_type where Employee_Basic_Information.ID=Extra_work_allowance.ID and Extra_work_allowance.ewtypeID=Extra_work_type.ewtypeID and Employee_Basic_Information.ID="+User_Login_Controller.p_id;
+        ObservableList<Ex_work> Info_list= FXCollections.observableArrayList();
+        U_ex_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        U_ex_date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        U_ex_type.setCellValueFactory(new PropertyValueFactory<>("type"));
+        U_ex_time.setCellValueFactory(new PropertyValueFactory<>("time"));
+        U_ex_allowance.setCellValueFactory(new PropertyValueFactory<>("allowance"));
+        U_ex_table.getItems().clear();
+        try {
+//            ptmt.setString(1,select_name);
+            ptmt=conn.prepareStatement(sql_search);
+            rs=ptmt.executeQuery();
+            while(rs.next())
+            {
+                Info_list.add(new Ex_work(rs.getString(1),rs.getDate(2),rs.getString(3),rs.getInt(4),rs.getInt(5)));
+                U_ex_table.setItems(Info_list);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("操作失败");
+            alert.showAndWait();
+            return ;
+        }finally {
+            if(ptmt!=null&&stmt!=null&&rs!=null)
+            {
+                try {
+                    ptmt=null;
+                    stmt=null;
+                    rs=null;
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
     //-------------------------------------以上为员工界面加班信息查询部分----------------------------------------------//
+
+
+
+
+    
 
 }
