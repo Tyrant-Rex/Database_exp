@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Department;
 import sample.Item.Type;
 import sample.Item.Year_info;
@@ -13,18 +14,14 @@ import sample.Item.Year_info;
 import java.sql.*;
 
 public class Search_y_info {
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
+
 
     public static void Show_y_table_info(TableView<Year_info> table, TableColumn id,TableColumn name,TableColumn salary,TableColumn bonus,String select_name)
     {
         String sql="call calculate_Month_salary()";
         try {
-            conn=Dbutil.myConnection();
-            ptmt=conn.prepareStatement(sql);
-            ptmt.execute();
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql);
+            Admin_Controller.ptmt.execute();
         }catch (SQLException e)
         {
             e.printStackTrace();
@@ -35,8 +32,8 @@ public class Search_y_info {
         }
         sql="call calculate_Year_bonus()";
         try {
-            ptmt=conn.prepareStatement(sql);
-            ptmt.execute();
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql);
+            Admin_Controller.ptmt.execute();
         }catch (SQLException e)
         {
             e.printStackTrace();Alert alert=new Alert(Alert.AlertType.INFORMATION);
@@ -51,11 +48,11 @@ public class Search_y_info {
         salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
         bonus.setCellValueFactory(new PropertyValueFactory<>("bonus"));
         try {
-            stmt=conn.createStatement();
-            rs=stmt.executeQuery(sql_search);
-            while(rs.next())
+            Admin_Controller.stmt=Admin_Controller.conn.createStatement();
+            Admin_Controller.rs=Admin_Controller.stmt.executeQuery(sql_search);
+            while(Admin_Controller.rs.next())
             {
-                Info_list.add(new Year_info(rs.getInt(1),rs.getString(2),rs.getInt(3),rs.getInt(4)));
+                Info_list.add(new Year_info(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getInt(3),Admin_Controller.rs.getInt(4)));
                 table.setItems(Info_list);
             }
         }catch (Exception e)
@@ -65,12 +62,12 @@ public class Search_y_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();

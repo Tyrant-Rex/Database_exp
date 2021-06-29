@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Department;
 import sample.Item.Employee;
 
@@ -15,10 +16,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Search_d_info {
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
+
 
     public static void Show_select_d_info(TableView<Department> table, TableColumn id,TableColumn name,TableColumn allowance,TableColumn manager,TableColumn tel,String select_name)
     {
@@ -31,13 +29,12 @@ public class Search_d_info {
         tel.setCellValueFactory(new PropertyValueFactory<>("telephone"));
         table.getItems().clear();
         try {
-            conn= Dbutil.myConnection();
-            ptmt=conn.prepareStatement(sql_search_d);
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql_search_d);
 //            ptmt.setString(1,select_name);
-            rs=ptmt.executeQuery();
-            while(rs.next())
+            Admin_Controller.rs=Admin_Controller.ptmt.executeQuery();
+            while(Admin_Controller.rs.next())
             {
-                Info_list.add(new Department(rs.getInt(1),rs.getString(2),rs.getInt(3),rs.getString(4),rs.getString(5)));
+                Info_list.add(new Department(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getInt(3),Admin_Controller.rs.getString(4),Admin_Controller.rs.getString(5)));
                 table.setItems(Info_list);
             }
 
@@ -49,12 +46,12 @@ public class Search_d_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();

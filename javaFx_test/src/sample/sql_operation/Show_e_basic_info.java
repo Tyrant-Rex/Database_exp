@@ -6,27 +6,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Employee;
 
 
 import java.sql.*;
 
 public class Show_e_basic_info {
-//    static String url="jdbc:mysql://localhost:3306/Salary_Management_System";
-//    static String user_name="root";
-//    static String password="123456";
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
-//    static String jdbc = "com.mysql.jdbc.Driver";
-
-//    public static void jdbcload() throws ClassNotFoundException {
-//        Class.forName(jdbc);
-//    }
-
     public static void show_table_e_basic(TableView<Employee> table, TableColumn id,TableColumn name,TableColumn sex,TableColumn age,TableColumn addr,TableColumn tel,TableColumn dept,TableColumn type)throws ClassNotFoundException{
-//        jdbcload();
         String sql_search_all="select id, Employee_Basic_Information.name, sex, age, address, Employee_Basic_Information.telephone, Department.NAME, Employee_Type.NAME from Employee_Basic_Information,Department,Employee_Type where Department.deptID=Employee_Basic_Information.deptID and Employee_Type.typeID=Employee_Basic_Information.typeID";
         ObservableList<Employee> Info_list= FXCollections.observableArrayList();
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -38,12 +25,11 @@ public class Show_e_basic_info {
         dept.setCellValueFactory(new PropertyValueFactory<>("department"));
         type.setCellValueFactory(new PropertyValueFactory<>("type"));
         try {
-            conn= Dbutil.myConnection();
-            stmt=conn.createStatement();
-            rs=stmt.executeQuery(sql_search_all);
-            while(rs.next())
+            Admin_Controller.stmt=Admin_Controller.conn.createStatement();
+            Admin_Controller.rs=Admin_Controller.stmt.executeQuery(sql_search_all);
+            while(Admin_Controller.rs.next())
             {
-                Info_list.add(new Employee(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8)));
+                Info_list.add(new Employee(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getString(3),Admin_Controller.rs.getInt(4),Admin_Controller.rs.getString(5),Admin_Controller.rs.getString(6),Admin_Controller.rs.getString(7),Admin_Controller.rs.getString(8)));
                 table.setItems(Info_list);
             }
         }catch (Exception e)
@@ -54,12 +40,12 @@ public class Show_e_basic_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();

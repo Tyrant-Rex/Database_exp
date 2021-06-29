@@ -14,12 +14,19 @@ import sample.Item.*;
 import sample.sql_operation.*;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 
 public class Admin_Controller {
     public Admin_Controller() {
     }
-
+    public static Connection conn=Dbutil.myConnection();
+    public static PreparedStatement ptmt=null;
+    public static ResultSet rs=null;
+    public static Statement stmt=null;
     @FXML
     private TableView<Employee> Basic_information_table;
     @FXML

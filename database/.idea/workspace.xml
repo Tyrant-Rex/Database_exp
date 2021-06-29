@@ -47,6 +47,14 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Extra_work_allowance: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="User_login_info_table: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -87,6 +95,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7ff395b1" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@7b5c5218" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
@@ -117,12 +130,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@3927fe9e" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7c0969f5" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7c0969f5" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3b4dc6a" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -186,7 +199,7 @@
       <workItem from="1624326929313" duration="1088000" />
       <workItem from="1624331124919" duration="16918000" />
       <workItem from="1624942901440" duration="3340000" />
-      <workItem from="1624948684310" duration="3011000" />
+      <workItem from="1624948684310" duration="4085000" />
     </task>
     <servers />
   </component>
@@ -206,22 +219,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="634" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1623308851369" />
-    <state width="1446" height="214" key="GridCell.Tab.0.bottom" timestamp="1624954430953">
+    <state width="1446" height="214" key="GridCell.Tab.0.bottom" timestamp="1624955549651">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1624954430953" />
-    <state width="1446" height="214" key="GridCell.Tab.0.center" timestamp="1624954430953">
+    <state width="1446" height="214" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1624955549651" />
+    <state width="1446" height="214" key="GridCell.Tab.0.center" timestamp="1624955549651">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1624954430953" />
-    <state width="1446" height="214" key="GridCell.Tab.0.left" timestamp="1624954430953">
+    <state width="1446" height="214" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1624955549651" />
+    <state width="1446" height="214" key="GridCell.Tab.0.left" timestamp="1624955549650">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1624954430953" />
-    <state width="1446" height="214" key="GridCell.Tab.0.right" timestamp="1624954430953">
+    <state width="1446" height="214" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1624955549650" />
+    <state width="1446" height="214" key="GridCell.Tab.0.right" timestamp="1624955549651">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1624954430953" />
+    <state width="1446" height="214" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1624955549651" />
     <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.bottom" timestamp="1621670619470">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

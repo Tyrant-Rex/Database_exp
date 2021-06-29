@@ -7,6 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Employee;
 
 import java.sql.Connection;
@@ -16,10 +17,7 @@ import java.sql.Statement;
 
 
 public class Search_e_info {
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
+
 
     public static void Show_select_e_info(TableView<Employee> table, TableColumn id, TableColumn name, TableColumn sex, TableColumn age, TableColumn addr, TableColumn tel, TableColumn dept, TableColumn type, String select_name)
     {
@@ -35,13 +33,12 @@ public class Search_e_info {
         type.setCellValueFactory(new PropertyValueFactory<>("type"));
         table.getItems().clear();
         try {
-            conn= Dbutil.myConnection();
-            ptmt=conn.prepareStatement(sql_search_e);
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql_search_e);
 //            ptmt.setString(1,select_name);
-            rs=ptmt.executeQuery();
-            while(rs.next())
+            Admin_Controller.rs=Admin_Controller.ptmt.executeQuery();
+            while(Admin_Controller.rs.next())
             {
-                Info_list.add(new Employee(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8)));
+                Info_list.add(new Employee(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getString(3),Admin_Controller.rs.getInt(4),Admin_Controller.rs.getString(5),Admin_Controller.rs.getString(6),Admin_Controller.rs.getString(7),Admin_Controller.rs.getString(8)));
             }
 
             table.setItems(Info_list);
@@ -53,12 +50,12 @@ public class Search_e_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();

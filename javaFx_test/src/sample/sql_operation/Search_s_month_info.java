@@ -7,6 +7,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Ex_work;
 import sample.Item.month_salary;
 
@@ -16,10 +17,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Search_s_month_info {
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
 
 
     public static void Show_select_s_month_info(TableView<month_salary> table,TableColumn id, TableColumn name,TableColumn dept, TableColumn salary, TableColumn dept_allowance, TableColumn ew_allowance, TableColumn deduction, TableColumn sum, ChoiceBox choiceBox_month,ChoiceBox choiceBox_dept,String select_name)
@@ -138,15 +135,14 @@ public class Search_s_month_info {
         sum.setCellValueFactory(new PropertyValueFactory<>("sum"));
         table.getItems().clear();
         try {
-            conn= Dbutil.myConnection();
-            ptmt=conn.prepareStatement(sql_search);
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql_search);
 //            ptmt.setString(1,select_name);
-            rs=ptmt.executeQuery();
-            while(rs.next())
+            Admin_Controller.rs=Admin_Controller.ptmt.executeQuery();
+            while(Admin_Controller.rs.next())
             {
                 temp=0;
-                temp=rs.getInt(4)+rs.getInt(5)+rs.getInt(6)-rs.getInt(7);
-                Info_list.add(new month_salary(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getInt(6),rs.getInt(7),temp));
+                temp=Admin_Controller.rs.getInt(4)+Admin_Controller.rs.getInt(5)+Admin_Controller.rs.getInt(6)-Admin_Controller.rs.getInt(7);
+                Info_list.add(new month_salary(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getString(3),Admin_Controller.rs.getInt(4),Admin_Controller.rs.getInt(5),Admin_Controller.rs.getInt(6),Admin_Controller.rs.getInt(7),temp));
                 table.setItems(Info_list);
             }
         }catch (Exception e)
@@ -157,12 +153,12 @@ public class Search_s_month_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();

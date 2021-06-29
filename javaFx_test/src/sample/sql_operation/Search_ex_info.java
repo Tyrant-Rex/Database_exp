@@ -7,6 +7,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Attend;
 import sample.Item.Ex_work;
 import sample.Item.Type;
@@ -14,18 +15,13 @@ import sample.Item.Type;
 import java.sql.*;
 
 public class Search_ex_info {
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
 
     public static void Show_select_ex_info(TableView<Ex_work> table,TableColumn id ,TableColumn name, TableColumn date, TableColumn type, TableColumn time, TableColumn allowance, ChoiceBox choiceBox,String select_name)
     {
         String sql="call calculate_ewSalary()";
         try {
-            conn=Dbutil.myConnection();
-            ptmt=conn.prepareStatement(sql);
-            ptmt.execute();
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql);
+            Admin_Controller.ptmt.execute();
         }catch (SQLException e)
         {
             e.printStackTrace();
@@ -87,12 +83,12 @@ public class Search_ex_info {
         allowance.setCellValueFactory(new PropertyValueFactory<>("allowance"));
         table.getItems().clear();
         try {
-            ptmt=conn.prepareStatement(sql_search);
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql_search);
 //            ptmt.setString(1,select_name);
-            rs=ptmt.executeQuery();
-            while(rs.next())
+            Admin_Controller.rs=Admin_Controller.ptmt.executeQuery();
+            while(Admin_Controller.rs.next())
             {
-                Info_list.add(new Ex_work(rs.getInt(1),rs.getString(2),rs.getDate(3),rs.getString(4),rs.getInt(5),rs.getInt(6)));
+                Info_list.add(new Ex_work(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getDate(3),Admin_Controller.rs.getString(4),Admin_Controller.rs.getInt(5),Admin_Controller.rs.getInt(6)));
                 table.setItems(Info_list);
             }
         }catch (Exception e)
@@ -103,12 +99,12 @@ public class Search_ex_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();

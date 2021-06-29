@@ -7,6 +7,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Admin_controller.Admin_Controller;
 import sample.Item.Attend;
 import sample.Item.Department;
 import sample.Item.Type;
@@ -17,10 +18,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Search_a_info {
-    static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
 
     public static void Show_select_a_info(TableView<Attend> table,TableColumn id, TableColumn name, TableColumn date, TableColumn deduction, ChoiceBox choiceBox, String select_name)
     {
@@ -78,13 +75,12 @@ public class Search_a_info {
         deduction.setCellValueFactory(new PropertyValueFactory<>("deduction"));
         table.getItems().clear();
         try {
-            conn= Dbutil.myConnection();
-            ptmt=conn.prepareStatement(sql_search);
+            Admin_Controller.ptmt=Admin_Controller.conn.prepareStatement(sql_search);
 //            ptmt.setString(1,select_name);
-            rs=ptmt.executeQuery();
-            while(rs.next())
+            Admin_Controller.rs=Admin_Controller.ptmt.executeQuery();
+            while(Admin_Controller.rs.next())
             {
-                Info_list.add(new Attend(rs.getInt(1),rs.getString(2),rs.getDate(3),rs.getInt(4)));
+                Info_list.add(new Attend(Admin_Controller.rs.getInt(1),Admin_Controller.rs.getString(2),Admin_Controller.rs.getDate(3),Admin_Controller.rs.getInt(4)));
                 table.setItems(Info_list);
             }
 
@@ -96,12 +92,12 @@ public class Search_a_info {
             alert.showAndWait();
             return ;
         }finally {
-            if(conn!=null&&ptmt!=null&&stmt!=null)
+            if(Admin_Controller.ptmt!=null&&Admin_Controller.stmt!=null&&Admin_Controller.rs!=null)
             {
                 try {
-                    conn.close();
-                    ptmt.close();
-                    stmt.close();
+                    Admin_Controller.ptmt=null;
+                    Admin_Controller.stmt=null;
+                    Admin_Controller.rs=null;
                 }catch (Exception e)
                 {
                     e.printStackTrace();
