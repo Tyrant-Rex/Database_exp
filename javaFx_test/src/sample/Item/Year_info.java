@@ -13,6 +13,12 @@ public class Year_info {
         this.bonus = bonus;
     }
 
+    public Year_info(String name, int salary, int bonus) {
+        this.name = name;
+        this.salary = salary;
+        this.bonus = bonus;
+    }
+
     public int getId() {
         return id;
     }

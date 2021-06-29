@@ -88,7 +88,17 @@
             </Tab>
             <Tab text="工资汇总">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="U_y_table" layoutX="229.0" layoutY="69.0" prefHeight="700.0" prefWidth="1012.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="U_y_name" prefWidth="303.0" text="员工姓名" />
+                            <TableColumn fx:id="U_y_salary" prefWidth="388.0" text="本年度总工资" />
+                              <TableColumn fx:id="U_y_bonus" prefWidth="320.0" text="年终奖" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="476.0" layoutY="721.0" mnemonicParsing="false" onAction="#Search_y_info" text="查询" />
+                     </children></AnchorPane>
               </content>
             </Tab>
         </tabs>

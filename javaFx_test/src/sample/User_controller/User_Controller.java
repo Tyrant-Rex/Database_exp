@@ -6,16 +6,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import sample.Item.Attend;
-import sample.Item.Employee;
-import sample.Item.Ex_work;
-import sample.Item.month_salary;
+import sample.Item.*;
 import sample.sql_operation.Dbutil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class User_Controller {
     static Connection conn=Dbutil.myConnection();
@@ -310,5 +304,74 @@ public class User_Controller {
     }
 
     //-------------------------------------以上为员工界面每月工资信息查询部分----------------------------------------------//
+    @FXML
+    TableView<Year_info> U_y_table;
+    @FXML
+    TableColumn U_y_name;
+    @FXML
+    TableColumn U_y_salary;
+    @FXML
+    TableColumn U_y_bonus;
 
+    @FXML
+    void Search_y_info() {
+        String sql="call calculate_Month_salary()";
+        try {
+            ptmt=conn.prepareStatement(sql);
+            ptmt.execute();
+        }catch (SQLException e)
+        {
+            e.printStackTrace();
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("操作失败");
+            alert.showAndWait();
+            return ;
+        }
+        sql="call calculate_Year_bonus()";
+        try {
+            ptmt=conn.prepareStatement(sql);
+            ptmt.execute();
+        }catch (SQLException e)
+        {
+            e.printStackTrace();Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("操作失败");
+            alert.showAndWait();
+            return ;
+        }
+        String sql_search="select NAME,year_salary,Bonus  from Sum_Month_Salary,Employee_Basic_Information where Employee_Basic_Information.ID=Sum_Month_Salary.ID and Employee_Basic_Information.ID="+User_Login_Controller.p_id;
+        ObservableList<Year_info> Info_list= FXCollections.observableArrayList();
+        U_y_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        U_y_salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        U_y_bonus.setCellValueFactory(new PropertyValueFactory<>("bonus"));
+        U_y_table.getItems().clear();
+        try {
+            stmt=conn.createStatement();
+            rs=stmt.executeQuery(sql_search);
+            while(rs.next())
+            {
+                Info_list.add(new Year_info(rs.getString(1),rs.getInt(2),rs.getInt(3)));
+                U_y_table.setItems(Info_list);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("操作失败");
+            alert.showAndWait();
+            return ;
+        }finally {
+            if(ptmt!=null&&stmt!=null&&rs!=null)
+            {
+                try {
+                    ptmt=null;
+                    stmt=null;
+                    rs=null;
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    //-------------------------------------以上为员工界面工资汇总信息查询部分----------------------------------------------//
 }
