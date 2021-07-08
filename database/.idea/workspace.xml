@@ -47,14 +47,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Extra_work_allowance: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Salary_Management_System@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Salary_Management_System: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="User_login_info_table: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -76,10 +68,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -91,51 +83,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7ff395b1" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7b5c5218" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4a882dd" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@37ea224d" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2ad79200" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4e968b01" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@b5e8f77" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7c0969f5" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Salary_Management_System@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@3b4dc6a" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -199,7 +146,14 @@
       <workItem from="1624326929313" duration="1088000" />
       <workItem from="1624331124919" duration="16918000" />
       <workItem from="1624942901440" duration="3340000" />
-      <workItem from="1624948684310" duration="4085000" />
+      <workItem from="1624948684310" duration="4613000" />
+      <workItem from="1625035880993" duration="1936000" />
+      <workItem from="1625051104375" duration="757000" />
+      <workItem from="1625122283877" duration="727000" />
+      <workItem from="1625190310855" duration="7222000" />
+      <workItem from="1625278773828" duration="1770000" />
+      <workItem from="1625383374716" duration="2593000" />
+      <workItem from="1625485142172" duration="704000" />
     </task>
     <servers />
   </component>
@@ -207,6 +161,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="446" y="119" key="#Project_Structure" timestamp="1625037902463">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="119" key="#Project_Structure/0.0.1707.920@0.0.1707.920" timestamp="1625037902463" />
     <state x="446" y="119" key="#Tomcat_Server" timestamp="1622898428057">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -219,22 +177,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="634" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1623308851369" />
-    <state width="1446" height="214" key="GridCell.Tab.0.bottom" timestamp="1624955549651">
+    <state width="1446" height="209" key="GridCell.Tab.0.bottom" timestamp="1625236373081">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1624955549651" />
-    <state width="1446" height="214" key="GridCell.Tab.0.center" timestamp="1624955549651">
+    <state width="1446" height="209" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625236373081" />
+    <state width="1446" height="209" key="GridCell.Tab.0.center" timestamp="1625236373081">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1624955549651" />
-    <state width="1446" height="214" key="GridCell.Tab.0.left" timestamp="1624955549650">
+    <state width="1446" height="209" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625236373081" />
+    <state width="1446" height="209" key="GridCell.Tab.0.left" timestamp="1625236373081">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1624955549650" />
-    <state width="1446" height="214" key="GridCell.Tab.0.right" timestamp="1624955549651">
+    <state width="1446" height="209" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625236373081" />
+    <state width="1446" height="209" key="GridCell.Tab.0.right" timestamp="1625236373081">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1446" height="214" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1624955549651" />
+    <state width="1446" height="209" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625236373081" />
     <state x="407" y="393" width="1143" height="243" key="GridCell.Tab.1.bottom" timestamp="1621670619470">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -287,10 +245,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="218" height="477" key="HiddenNamespacesPopup/0.0.1707.920@0.0.1707.920" timestamp="1622530756743" />
-    <state x="429" y="70" key="SettingsEditor" timestamp="1622867368638">
+    <state x="429" y="70" key="SettingsEditor" timestamp="1625286755985">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="429" y="70" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1622867368638" />
+    <state x="429" y="70" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625286755985" />
     <state x="679" y="333" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1624336607119">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -311,10 +269,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="234" y="166" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1707.920@0.0.1707.920" timestamp="1623551953380" />
-    <state x="538" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1624942901137">
+    <state x="538" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1625485145279">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="538" y="285" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1624942901137" />
+    <state x="538" y="285" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1625485145279" />
     <state x="646" y="144" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1620718948383">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

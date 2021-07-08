@@ -10,27 +10,6 @@ public class Dbutil {
     static String user_name="root";
     static String password="123456";
     static Connection conn=null;
-    static PreparedStatement ptmt=null;
-    static ResultSet rs=null;
-    static Statement stmt=null;
-    static String jdbc = "com.mysql.jdbc.Driver";
-
-
-    public void setUserName(String userName) {
-        UserName = userName;
-    }
-    public void setPassword(String password) {
-        Password = password;
-    }
-
-    public String getUserName() {
-        return UserName;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
     public static Connection myConnection() {
         try
         {

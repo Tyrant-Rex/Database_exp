@@ -81,8 +81,6 @@ public class Update_delete_e_basic_controller {
                 }
             }
         }
-
-
     }
 
     @FXML
